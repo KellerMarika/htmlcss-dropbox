@@ -141,6 +141,7 @@ nav .btn.small {
     align-items: center;
     padding: var(--space_S);
     position: fixed;
+    z-index: 2;
     background-color: #ffffff;
     width: 100%;
 }
@@ -178,6 +179,9 @@ header article {
 [class*="col_70"] {
     width: 70%;
 }
+[class*="col_60"] {
+    width: 60%;
+}
 
 .jumbo a {
     padding-bottom: var(--space_M);
@@ -198,10 +202,24 @@ header article {
 /*************************
            MAIN
 **************************/
-/* sections */
-.section-header{
-    padding: 0 var(--space_L);
-}
+/* section  business plan */
+
+
+
 .business-plan .radio-btn span{
     padding-right:var(--space_L);
+}
+
+section img{
+    width: 100%;
+}
+
+/* contat*/
+
+
+
+/* operation */
+
+.operations .row_30-30-30{
+    flex-wrap: wrap;
 }
