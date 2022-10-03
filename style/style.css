@@ -1,0 +1,114 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/**************************** 
+         VARIABILI          
+ ****************************/
+
+:root {
+
+    /* background colors */
+    --first_bg_color: #0157ff;
+    --second_bg_color: #a5cbe6;
+
+    /* border colors */
+    --first_brd_color: #605f60;
+    --second_brd_color: #e4e2e4;
+
+    /* text colors */
+    --first_txt_color: #080000;
+    --second_txt_color: #080000;
+    --tird_txt_color: #61082b;
+
+    /*max-width */
+    --first_max-width: 920px;
+    --second_max-width: 1200px;
+
+    /* space */
+    /*     --space_XS: */
+    --space_XS:5px;
+    --space_S: 10px;
+  /*   --space_M: 20px;
+    --space_L: 40px;
+ */
+    /*column-size  */
+    --first_col-space: 30%;
+    --second_col-space: 70%;
+    --third_col-space: 60%;
+    --fourth_col-space: 20%;
+
+    /* column/row space */
+    --fifth_col-space: 50%;
+
+    /* font-size */
+    --font-size_XS:12px;
+
+}
+
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: var(--font-size_XS);
+}
+
+
+
+
+/*************************
+            ELEMENTS
+    **************************/
+
+
+
+h1 {
+
+}
+
+h2 {
+
+}
+
+h3 {
+
+}
+
+h4{
+
+}
+
+h5{
+
+}
+article{
+
+}
+
+section{
+
+}
+
+li{
+    list-style-type: none;
+}
+
+nav li{
+    display: inline-block;
+}
+nav a{
+    text-decoration: none;
+}
+
+.nav-container{
+    display: flex;
+    justify-content: space-between;
+    border:1px solid black;
+    padding: var(--space_S);
+}
+.nav-sx *,
+.nav-dx *{
+display: inline;
+vertical-align: middle;
+padding:  var(--space_XS);
+}
