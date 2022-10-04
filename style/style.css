@@ -16,12 +16,15 @@
 
     /* border colors */
     --first_brd_color: #605f60;
-    --second_brd_color: #e4e2e4;
+    --second_brd_color: #ddcdbf;
 
     /* text colors */
     --first_txt_color: #080000;
     --second_txt_color: #ffffff;
     --tird_txt_color: #61082b;
+
+    /* border */
+    --border:1px solid #ddcdbf;
 
     /*max-width */
     --first_max-width: 920px;
@@ -55,12 +58,9 @@ body {
 }
 
 
-
-
 /*************************
             ELEMENTS
     **************************/
-
 
 h1 {
     font-size: 52px;
@@ -70,13 +70,15 @@ h1 {
 
 h2 { font-size: 32px;
     font-weight: 700;
-    padding: var(--space_L) 0;}
+    padding: var(--space_XL) 0;}
 
-h3 {}
+h3 {font-size: 24px;
+    font-weight: 700;
+    padding: var(--space_XS) 0;}
 
-h4 {}
-
-h5 {}
+h4 {font-size: 14px;
+    font-weight: 700;
+    padding: var(--space_XS) 0;}
 
 p {
     padding-bottom: var(--space_M);
@@ -85,18 +87,18 @@ p {
 a {
     display: inline-block;
     padding-bottom: var(--space_M);
-
 }
 
 section {
     max-width: var(--first_max-width);
     margin: auto;
-  }
+}
 
 li {
     list-style-type: none;
 }
 
+/* bottoni */
 
 .btn {
     background-color: #0157ff;
@@ -108,10 +110,9 @@ li {
 
 .btn.small {
     padding: var(--space_XS) var(--space_S);
-
 }
 
-
+/* sta classe non mi convince */
 .alternative {
     padding-bottom: var(--space_M);
 }
@@ -179,8 +180,14 @@ header article {
 [class*="col_70"] {
     width: 70%;
 }
+
 [class*="col_60"] {
     width: 60%;
+}
+
+[class*="col_40"] {
+    width: 40%;
+    position: relative;
 }
 
 .jumbo a {
@@ -202,13 +209,156 @@ header article {
 /*************************
            MAIN
 **************************/
-/* section  business plan */
 
 
+/* BUISNESS PLAN SECTION */
+.business-plan_section{
+    /* relative <-- icon absolute */
+    position: relative;
+}
+.section-body.row_30-30-30{
+    justify-content: space-between;
+    padding-bottom: var(--space_L);
+}
 
-.business-plan .radio-btn span{
+/* radio-button ................DA STILIZZARE*/ 
+.business-plan_section .radio-btn{
+margin-bottom: var(--space_M);
+}
+.radio-btn span{
     padding-right:var(--space_L);
 }
+
+.section-header,
+.section-body,
+.section-footer,
+.divider{
+    padding-bottom: var(--space_M);
+}
+
+/* linea divisoria */
+.divider{
+    width: 20%;
+    border-top: 1px solid var(--second_brd_color);
+    padding-bottom: var(--space_L);
+}
+
+/* card */
+
+.section-body .card.col_30 {
+    width: 30%;
+}
+.card.col_30 .card-container,
+.row_70-30{
+    border: var(--border);
+    padding: var(--space_M);
+}
+.card_top-title,
+.footer_top-title{
+    text-align: center;
+    border:var(--border);
+    border-bottom: 0;
+    padding: var(--space_S);
+}
+
+.card .price{
+    font-weight: 800;
+}
+
+.price::before{
+    content:"\20AC";
+}
+
+.card .price-plan{
+    color:var(--second_brd_color);
+    padding: var(--space_XS) 0 var(--space_M) 0;
+}
+
+.card .btn{
+    text-align: center;
+    margin: var(--space_M);
+}
+
+.card ul{
+    padding: var(--space_M) ;  
+}
+
+.card li{
+    padding:var(--space_S) 0; 
+}
+/* icone */
+/* devo chiedere se c'era un modo meno prolisso di scriverlo perchè è ripetitivo */
+
+.card_top-title::before,
+.card li.users::before{
+    content:"\f007";
+    font-family: 'FontAwesome';
+    transform: translateY(2px);
+    position:absolute;
+    left:25px;
+    
+}
+.advanced .card_top-title::before,
+.advanced li.users::before{
+    content:"\f0c0";
+    font-family: 'FontAwesome';
+    transform: translateY(2px);
+    position:absolute;
+    left:25px; 
+}
+
+.enterprise .card_top-title::before{
+    content:"\f1ad";
+    font-family: 'FontAwesome';
+    transform: translateY(2px);
+    position:absolute;
+    left:25px;
+}
+
+.card li.archive::before{
+    content: "\f07b";
+    font-family: 'FontAwesome';
+    transform: translateY(2px);
+    position:absolute;
+    left:25px;   
+}
+
+.card li.sharing::before{
+    content: "\f1e0";
+    font-family: 'FontAwesome'; 
+    transform: translateY(2px);
+    position:absolute;
+    left:25px;
+}    
+
+.card-footer li::before{
+    content: "\f00c";
+    font-family: 'FontAwesome'; 
+    color: #0157ff;
+    font-size: larger;
+    transform: translateY(2px);
+    position:absolute;
+    left:var(--space_M);
+}
+.business-plan_section .section-footer h4{
+    padding-bottom: var(--space_L);
+}
+
+/*  */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 section img{
     width: 100%;
