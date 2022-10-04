@@ -35,7 +35,8 @@
     --space_XS: 5px;
     --space_S: 10px;
 
-    --space_M: 20px; /* potrei avere una sola variabile e fare solo calocli!!!!!!!! */
+    --space_M: 20px;
+    /* potrei avere una sola variabile e fare solo calocli!!!!!!!! */
     --space_L: 40px;
     --space_XL: 60px;
 
@@ -124,7 +125,14 @@ li {
 .btn.white {
     background-color: #ffffff;
     color: #080000;
-    border: 1px outset black;
+    border-top: 1px solid var(--second_brd_color);
+    border-right: 1px solid #b3aaa3;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    border-left: 1px solid grey;
+}
+
+.btn.borderless {
+    border: none;
 }
 
 /* sta classe non mi convince ..........................*/
@@ -196,8 +204,11 @@ nav .btn.small {
 
 /* jumbo */
 header article {
-    background-color: #a5cbe6;
     margin-bottom: 60px;
+}
+
+.bg-color {
+    background-color: var(--second_bg_color);
 }
 
 #jumbo-container {
@@ -382,32 +393,37 @@ header article {
 }
 
 section img {
-
     width: 100%;
 }
 
 /*  OPERATION............................... */
 
-#operation .section-title h2 {}
-
 #operations .row_30-30-30 {
     flex-wrap: wrap;
     gap: var(--space_L);
 }
- .col-wrap h3{
-    padding-bottom: var(--space-XL)
-};
-    
 
-
-
-/*bunner  */
-
-section.bunner {
-    padding: var(--space_XL) 0;
-
+.col-wrap p {
+    padding-bottom: var(--space-XL);
 }
 
+/*bunner  */
+.row_60-40 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.col_40 {
+    text-align: right;
+}
+
+.bunner-container {
+    padding: var(--space_XL) 0;
+}
+
+.bunner-container .title.tird-color h2 {
+    color: #61082b;
+}
 
 /* square------------------------------------ */
 
@@ -449,23 +465,26 @@ section.bunner {
     align-items: center;
 }
 
-.mini.square-content>*{
+.mini.square-content>* {
     position: absolute;
     width: 50%;
     height: 50%;
     /* svg bianche */
     filter: invert();
 }
-.maxi.square-content .main-wrap{
+
+.maxi.square-content .main-wrap {
     position: absolute;
     width: 33.3%;
     padding: var(--space_L);
 }
-.main-wrap img{
+
+.main-wrap img {
     width: 50%;
     padding-bottom: var(--space_L);
 
 }
+
 .square-content.university_of_florida>img {
     height: 10%;
 }
@@ -505,17 +524,68 @@ section.bunner {
     background-color: #ffd830;
 }
 
-.maxi-square .square-content{
+.maxi-square .square-content {
     height: 100%;
     background-color: #f5f5f5;
 }
+
 /* .................................. */
 
+/* faq */
+#faq{
+    padding: var(--space_XL);
+}
+.faq-dropdown {
+    display: flex;
+    justify-content: space-between;
+    /* input prima di label */
+    flex-direction: row-reverse;
+    padding: var(--space_L) 0; 
+    border: none;
 
+    /* ..........................................bordi collassano sono orrendi */
+    border-top: 1px solid #605f60;
+    border-bottom:1px solid  #b3aaa3;
+}
+.faq-dropdown:nth-child(2n+1){
+    border-bottom:1px solid  #605f60;
+    border-top: 1px solid  #b3aaa3;
+}
 
+.faq-dropdown .answer p{
+    padding: var(--space_M) 0;
+}
 
-/* contat*/
+#faq #dropdown_01 {
+    visibility: hidden;
+    position: relative;
+}
 
+#faq #dropdown_01:checked {
+    visibility: hidden;
+    /*     position: relative; */
 
+}
 
-/* operation */
+#faq #dropdown_01::before {
+    content: "\f078";
+    font-family: 'FontAwesome';
+    position: absolute;
+    right: var(--space_L);
+    visibility: visible
+}
+
+#faq #dropdown_01::checked::before {
+    content: "\f077";
+    font-family: 'FontAwesome';
+    visibility: visible;
+}
+
+.faq-dropdown>input[type=checkbox]+label {
+    height: var(--space_M);
+    overflow: hidden;
+}
+
+.faq-dropdown>input[type=checkbox]:checked+label {
+    height: fit-content;
+}
