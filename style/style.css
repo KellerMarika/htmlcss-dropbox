@@ -70,7 +70,7 @@ h1 {
 
 h2 { font-size: 32px;
     font-weight: 700;
-    padding: var(--space_XL) 0;}
+    padding-bottom: var(--space_L)}
 
 h3 {font-size: 24px;
     font-weight: 700;
@@ -89,6 +89,9 @@ a {
     padding-bottom: var(--space_M);
 }
 
+img{
+    display: block;
+}
 section {
     max-width: var(--first_max-width);
     margin: auto;
@@ -111,7 +114,11 @@ li {
 .btn.small {
     padding: var(--space_XS) var(--space_S);
 }
-
+.btn.white{
+    background-color: #ffffff;
+    color: #080000;
+    border: 1px outset black;
+}
 /* sta classe non mi convince */
 .alternative {
     padding-bottom: var(--space_M);
@@ -136,7 +143,7 @@ nav .btn.small {
     margin-bottom: 0;
 }
 
-.nav-container {
+#nav-container{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -144,7 +151,7 @@ nav .btn.small {
     position: fixed;
     z-index: 2;
     background-color: #ffffff;
-    width: 100%;
+    width: 95%;
 }
 
 .nav-sx *,
@@ -160,11 +167,11 @@ header article {
     margin-bottom: 60px;
 }
 
-.jumbo-container {
+#jumbo-container {
     width: var(--second_max-width);
     margin: auto;
     position: relative;
-    top: 60px;
+    top: var(--space_XL);
 }
 
 [class*="row"] {
@@ -209,10 +216,14 @@ header article {
 /*************************
            MAIN
 **************************/
+.section-container,
+section.bunner{
+    padding: var(--space_XL) 0;
+}
 
 
-/* BUISNESS PLAN SECTION */
-.business-plan_section{
+/* BUISNESS PLAN SECTION................... */
+#business-plan_section{
     /* relative <-- icon absolute */
     position: relative;
 }
@@ -222,7 +233,7 @@ header article {
 }
 
 /* radio-button ................DA STILIZZARE*/ 
-.business-plan_section .radio-btn{
+#business-plan_section .radio-btn{
 margin-bottom: var(--space_M);
 }
 .radio-btn span{
@@ -243,7 +254,7 @@ margin-bottom: var(--space_M);
     padding-bottom: var(--space_L);
 }
 
-/* card */
+/* card....................... */
 
 .section-body .card.col_30 {
     width: 30%;
@@ -340,29 +351,43 @@ margin-bottom: var(--space_M);
     position:absolute;
     left:var(--space_M);
 }
-.business-plan_section .section-footer h4{
+#business-plan_section .section-footer h4{
     padding-bottom: var(--space_L);
 }
 
-/*  */
 
+/*  PARTNERSHIP SECTION............................... */
 
-
-
-
-
-
-
-
-
-
+#partnership-section .col_40{
+    padding: var(--space_L);
+}
+.partnership-card p{
+    padding-top: var(--space_S);
+}
 
 
 
 
 section img{
+
     width: 100%;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* contat*/
 
