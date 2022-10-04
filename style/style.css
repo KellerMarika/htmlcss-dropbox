@@ -365,25 +365,61 @@ margin-bottom: var(--space_M);
     padding-top: var(--space_S);
 }
 
-
-
-
 section img{
 
     width: 100%;
+}
+
+/*  OPERATION............................... */
+
+#operation .section-title h2{
+  
+}
+#operations .row_30-30-30{
+    flex-wrap: wrap;
 }
 
 
 
 
 
+/* spitoccata  */
 
+.quadratini-bellini{
+    display: flex;
+    border:3px solid #61082b;
+}
+/* 3 riquadri genitori uguali */
+.quadratini-bellini>*{
+    width: 33.3%;
+}
+/* 3 questa regola  permette di far riferire l'altezza dell'elemento non al padre ma alle misure dell'elemento stesso!! */
+.quadratini-bellini>*::after{
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+}
 
+/* maxi contenitori larerali */
+.mini-square{
+    border:3px solid #68c2c5;
+    display: flex;
+    flex-wrap: wrap;
+}
+/* square  */
+.mini-square>*{
+    border:2px solid #b7f116;
+    width: 50%;
+    height: 50%;
+  position: relative;
+}
 
-
-
-
-
+/* da rilavorare */
+.square-content>*{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
 
 
 
@@ -395,6 +431,3 @@ section img{
 
 /* operation */
 
-.operations .row_30-30-30{
-    flex-wrap: wrap;
-}
