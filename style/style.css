@@ -392,7 +392,12 @@ section img {
 
 #operations .row_30-30-30 {
     flex-wrap: wrap;
+    gap: var(--space_L);
 }
+ .col-wrap h3{
+    padding-bottom: var(--space-XL)
+};
+    
 
 
 
@@ -400,7 +405,7 @@ section img {
 
 section.bunner {
     padding: var(--space_XL) 0;
-    
+
 }
 
 
