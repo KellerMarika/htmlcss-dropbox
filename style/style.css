@@ -407,7 +407,7 @@ section img {
     padding-bottom: var(--space-XL);
 }
 
-/*bunner  */
+/*bunner  ..................................*/
 .row_60-40 {
     display: flex;
     justify-content: space-between;
@@ -423,6 +423,10 @@ section img {
 
 .bunner-container .title.tird-color h2 {
     color: #61082b;
+}
+
+.bg-color .bunner-container {
+    margin-bottom: var(--space_L);
 }
 
 /* square------------------------------------ */
@@ -532,27 +536,29 @@ section img {
 /* .................................. */
 
 /* faq */
-#faq{
+#faq {
     padding: var(--space_XL);
 }
+
 .faq-dropdown {
     display: flex;
     justify-content: space-between;
     /* input prima di label */
     flex-direction: row-reverse;
-    padding: var(--space_L) 0; 
+    padding: var(--space_L) 0;
     border: none;
 
     /* ..........................................bordi collassano sono orrendi */
     border-top: 1px solid #605f60;
-    border-bottom:1px solid  #b3aaa3;
-}
-.faq-dropdown:nth-child(2n+1){
-    border-bottom:1px solid  #605f60;
-    border-top: 1px solid  #b3aaa3;
+    border-bottom: 1px solid #b3aaa3;
 }
 
-.faq-dropdown .answer p{
+.faq-dropdown:nth-child(2n+1) {
+    border-bottom: 1px solid #605f60;
+    border-top: 1px solid #b3aaa3;
+}
+
+.faq-dropdown .answer p {
     padding: var(--space_M) 0;
 }
 
@@ -589,3 +595,51 @@ section img {
 .faq-dropdown>input[type=checkbox]:checked+label {
     height: fit-content;
 }
+
+/* footer */
+
+footer {
+    background-color: #080000;
+    color: white;
+}
+
+.footer-container {
+    width: var(--first_max-width);
+    margin: auto;
+}
+
+/* footer liste */
+footer .row_20-20-20-20-20 {
+    display: flex;
+    padding: var(--space_L) 0;
+}
+
+footer .col_20 {
+    width: 20%;
+}
+
+footer .col_20 h4 {
+    padding: var(--space_M);
+}
+
+footer .col_20 li {
+    font-weight: 300;
+    padding-bottom: var(--space_S);
+}
+footer .col_20 ul{
+    padding-bottom: var(--space_L);
+}
+
+/* footer select */
+
+.footer-language {
+    padding-bottom: var(--space_L);
+}
+.footer-language *{
+    background-color: #080000;
+    color: #605f60;
+    border: none;
+ 
+}
+
+
