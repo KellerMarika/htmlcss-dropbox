@@ -33,10 +33,10 @@
     /* space */
     /*     --space_XS: */
     --space_XS:5px;
-    
+
     --space_S:15px;
     --space_2S: calc(var(--space_S)*2);
-    --space_4S: calc(var(--space_S)*4);
+    var(--space_2S)
 
     --space_1-2M: calc(var(--spaceM)/2);
      --space_M: 20px;
@@ -65,18 +65,18 @@ classi comuni
 h1 {
     font-size: 52px;
     font-weight: 800;
-    padding-bottom: 40px;
+    padding-bottom: var(--space_2M);
 }
 
 h2 {
     font-size: 32px;
     font-weight: 700;
-    padding-bottom: 40px;
+    padding-bottom: var(--space_2M);
 }
 
 h3 {
     font-size: 24px;
-    padding: 15px 0;
+    padding: var(--space_S) 0;
     font-weight: 700;
 
 }
@@ -84,7 +84,7 @@ h3 {
 h4 {
     font-size: 14px;
     font-weight: 700;
-    padding-bottom: 15px;
+    padding-bottom: var(--space_S);
 }
 
 a {
@@ -97,11 +97,11 @@ li {
 }
 
 li:not(:last-child) {
-    padding-bottom: 15px;
+    padding-bottom: var(--space_S);
 }
 
 ul {
-    padding-top: 15px;
+    padding-top: var(--space_S);
 }
 
 article {
@@ -122,13 +122,13 @@ section img {
 
 section,
 article {
-    padding-bottom: 80px;
+    padding-bottom: var(--space_4M);
 }
 
 /***** CLASS-UTILITIES ********************/
 
 [class*="section-title"] {
-    padding-top: 20px;
+    padding-top: var(--space_M);
 }
 
 .sub-title {
@@ -140,7 +140,7 @@ article {
 .divider {
     width: 20%;
     border-top: 1px solid var(--secondary_brd_color);
-    margin: 20px 0;
+    margin: var(--space_M) 0;
 }
 
 /** row / column *******/
@@ -248,7 +248,7 @@ header article {
 
 #jumbo-container {
     position: relative;
-    padding: 0 20px;
+    padding: 0 var(--space_M);
     top: calc(var(--space_M)*6);
 }
 
@@ -283,7 +283,7 @@ header article {
 .section-body,
 .section-footer,
 .card-container {
-    padding-bottom: 30px;
+    padding-bottom: var(--space_2S);
 }
 
 /*********card*********/
@@ -313,7 +313,7 @@ header article {
 .card-container,
 .section-footer .col_30,
 .section-footer .col_70 {
-    padding: 0 20px;
+    padding: 0 var(--space_M);
 }
 
 .section-footer h3 {
@@ -326,7 +326,7 @@ header article {
 
 .card .price-plan {
     color: var(--secondary_brd_color);
-    padding-bottom: 15px;
+    padding-bottom: var(--space_S);
 }
 
 #business-plan_section .btn {
@@ -396,7 +396,7 @@ header article {
 /**********PARTNERSHIP SECTION****************** */
 
 #partnership-section .col_40 {
-    padding: 15px 30px;
+    padding: 15px var(--space_2S);
     text-align: left;
 }
 
@@ -423,20 +423,20 @@ header article {
     text-align: center;
 }
 section.bunner{
-    padding-top: 40px;
+    padding-top: var(--space_2M);
 }
 
 #bunner_more-teams{
- margin-bottom: 80px;
+ margin-bottom: var(--space_4M);
 }
 
 #bunner_more-teams .title.tird-color h2 {
     padding-bottom:0;
-    padding-top: 20px ;
+    padding-top: var(--space_M) ;
     color: #61082b;
 }
 #bunner_more-teams .row_60-40{
- padding-top: 40px;
+ padding-top: var(--space_2M);
 }
 
 /************** square ************************/
@@ -490,12 +490,12 @@ section.bunner{
 .maxi.square-content .main-wrap {
     position: absolute;
     width: 33.3%;
-   padding:30px;
+   padding:var(--space_2S);
 }
 
 .main-wrap .divider{
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: var(--space_2S);
+    margin-bottom: var(--space_2S);
 }
 
 .main-wrap img {
@@ -550,7 +550,7 @@ section.bunner{
 
 /*********** F.A.Q ***********************/
 #faq h4{
-    padding: 30px 0;
+    padding: var(--space_2S) 0;
     display: inline-block;
 }
 #faq input{
@@ -576,18 +576,17 @@ visibility: hidden;
     font-family: 'FontAwesome';
     position: absolute;
     visibility: visible;
-    padding: 30px;
-    transform: translateX(-30px) translateY(-30px);
+    padding: var(--space_2S);
+    transform: translateX( calc( 0px - var(--space_2S))) translateY( calc( 0px - var(--space_2S)));
 }
 
 #faq input:checked::before {
     content: "\f077";
     font-family: 'FontAwesome';
     visibility: visible;
-    padding: 30px;
-    transform: translateX(-30px) translateY(-30px);
+    padding: var(--space_2S);
+    transform: translateX( calc( 0px - var(--space_2S))) translateY( calc( 0px - var(--space_2S)));
 }
- 
 .faq-dropdown label>input[type=checkbox]+.answer {
     height:0px;
     overflow: hidden;
@@ -610,14 +609,14 @@ footer {
 
 .footer-container {
     width: var(--secondary_max-width);
-    padding: 30px 0;
+    padding: var(--space_2S) 0;
     margin: auto;
 }
 
 footer .row_20x5 {
     display: flex;
     padding-top: 10px;
-    padding-bottom: 30px;
+    padding-bottom: var(--space_2S);
 }
 
 footer .col_20 {
