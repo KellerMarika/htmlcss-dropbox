@@ -96,7 +96,7 @@ li {
     list-style-type: none;
 }
 
-li:not(:last-child) {
+main li:not(:last-child) {
     padding-bottom: var(--space_S);
 }
 
@@ -219,7 +219,7 @@ article a {
 }
 
 nav .btn.small {
-    margin-bottom: 0;
+    margin: 0;
 }
 
 #nav-container {
@@ -238,6 +238,40 @@ nav .btn.small {
     display: inline;
     vertical-align: middle;
     padding: var(--space_XS);
+}
+
+
+/********dropdown*********************/
+/* ------work in progress ---------- */
+
+nav ul{
+    overflow: hidden;
+}
+.dropdown li{
+    display: inline-block;
+    text-align: left;
+}
+
+li.dropdown{
+    display: inline-block;
+    position: relative;
+}
+li.dropdown:hover{
+    background-color: #f2eee8;
+}
+.dropdown-content{
+    position: absolute;
+    top:30px;
+    left:0;
+    padding: 15px;
+    text-align: left;
+    display: none;
+    background-color: #f2eee8;
+
+}
+.dropdown:hover .dropdown-content{
+    display: block;
+    background-color: #f2eee8;
 }
 
 /**********JUMBOTRON*****************/
@@ -259,15 +293,72 @@ header article {
 
 .jumbo-download-icon {
     position: absolute;
-    bottom: var(--space_4M);
+/*     bottom: var(--space_4M); */
+    bottom: 140px;
     font-size: 36px;
     color: #080000;
 }
 
-.arrow-anchor{
+@keyframes arrow-anchor{
+    0%{ 
+        transform: rotate(0deg) scale(100%) translateY(0);
+        color: #080000;
+    }
+
+    15%{  
+        transform: rotate(360deg) scale(150%) translateY(0);
+        color: var(--primary_bg_color);
+    }
+
+    30%{  
+        transform: rotate(360deg) scale(150%) translateY(0);
+        color: var(--primary_bg_color); 
+    }
+
+    70%{  
+        transform: rotate(360deg) scale(150%) translateY(5px);
+        color:#4880f0;    
+    }
+ 
+    75%{  
+        transform: rotate(360deg) scale(200%) translateY(10px);
+        color:rgb(178, 250, 240);
+     
+    }
+    80%{  
+        transform: rotate(360deg) scale(100%) translateY(-10px);
+        color:var(--primary_bg_color); 
+    }
+
+    95%{  
+        transform: rotate(360deg) scale(90%) translateY(0);
+        color: var(--primary_bg_color);   
+    }
+
+    100%{  
+        transform: rotate(360deg) scale(100%) translateY(0);
+        color: #080000;   
+    }
 
 }
-@keyframes
+.arrow-anchor{
+    position:absolute;
+    z-index: 3;
+}
+.arrow-anchor:hover{
+position: absolute;
+animation-name: arrow-anchor;
+animation-duration: 2s;
+animation-timing-function: ease-out;
+}
+
+
+.jumbo-download-icon .fa-arrow-right{
+    position: relative;
+    transform: translateY(3800px);
+    z-index: 2;
+}
+
 
 /*************************
            MAIN
@@ -608,7 +699,6 @@ section.bunner {
     border-top: 1px solid #605f6036;
     border-bottom: 1px solid #b3aaa3a1;
 }
-
 
 #faq input:checked {
     position: relative;
