@@ -156,15 +156,24 @@
 
                     <!-- bottoni da stilizzare -----------------------------------placeolder!!!----------->
                     <div class="radio-btn">
-                        <span>
-                            <input type="radio" id="month" name="billing" value="monthly">
-                            <label for="month">Fatturazione mensile </label>
-                        </span>
-                        <span>
-                            <input type="radio" id="year" name="billing" value="annual">
-                            <label for="year">Fatturazione mensile </label>
-                        </span>
 
+                        <div class="">
+                            <label class="radiobutton-container" for="month">
+                                <!-- radio-button da stilizzare -->
+                                <input type="radio" id="month" name="billing" value="monthly">
+                                <span class="radio-mark"></span>
+                                Fatturazione mensile
+                            </label>
+                        </div>
+
+                        <div>
+                            <label for="year" class="radiobutton-container">
+                                <!-- radio-button da stilizzare -->
+                                <input type="radio" id="year" name="billing" value="annual">
+                                <span class="radio-mark"></span>
+                                Fatturazione mensile
+                            </label>
+                        </div>
                     </div>
                 </div>
                 <!-- body sezione---------------------------------->
@@ -176,6 +185,7 @@
 
                         <!-- card header -------------->
                         <div class="card_top-title">
+                            <i class="fa-solid fa-user"></i>
                             <h5>Singolo</h5>
                         </div>
 
@@ -233,6 +243,7 @@
 
                         <!-- card header ------------------------>
                         <div class="card_top-title">
+                            <i class="fa-solid fa-users"></i>
                             <h5>Singolo</h5>
                         </div>
 
@@ -290,6 +301,7 @@
 
                         <!-- card header ----------------------------->
                         <div class="card_top-title">
+                            <i class="fa-solid fa-users"></i>
                             <h5>Azienda</h5>
                         </div>
 
@@ -717,10 +729,10 @@
 
 
     <footer>
-        <div class="footer-container">
+        <div id="footer-container">
 
             <div class="row_20x5">
-                
+
                 <div class="col_20">
                     <div class="section-title">
                         <h4>Dropbox</h4>
@@ -814,19 +826,10 @@
 </html>
 
 <!-- to do list:
-CSS: 
-variabili
-classi
-spazi
 
 
-HTML
-id
-classi
-indentazione
 
 work:
-radiobutton style
 effect faq checkbox
 menu a tendina nav
 altra pagina html del sito

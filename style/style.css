@@ -32,14 +32,12 @@
 
     /* space */
     /*     --space_XS: */
-    --space_XS:5px;
+    --space_XS: 5px;
 
-    --space_S:15px;
+    --space_S: 15px;
     --space_2S: calc(var(--space_S)*2);
-    var(--space_2S)
-
-    --space_1-2M: calc(var(--spaceM)/2);
-     --space_M: 20px;
+    var(--space_2S) --space_1-2M: calc(var(--spaceM)/2);
+    --space_M: 20px;
     --space_2M: calc(var(--space_M)*2);
     --space_4M: calc(var(--space_M)*4);
 
@@ -273,6 +271,7 @@ header article {
 #business-plan_section {
     /* relative <-- icon absolute */
     position: relative;
+
 }
 
 .section-body.row_30-30-30 {
@@ -285,6 +284,42 @@ header article {
 .card-container {
     padding-bottom: var(--space_2S);
 }
+
+/**********Radio-button**************/
+
+.radiobutton-container {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    padding-right: 40px;
+}
+
+.radiobutton-container input[type="radio"] {
+    opacity: 0;
+    cursor: pointer;
+    position: absolute;
+    transform: translatex(5px);
+}
+
+.radiobutton-container .radio-mark {
+    display: inline-block;
+    width: 20px;
+    aspect-ratio: 1 / 1;
+    border: 1px solid var(--secondary_brd_color);
+    border-radius: 50%;
+    transform: translateY(5px) translateX(-5px);
+}
+
+.radiobutton-container:hover input +.radio-mark {
+    background-color: var(--secondary_bg_color);
+}
+
+
+.radiobutton-container input:checked + .radio-mark {
+    background-color:white;
+    border: 7px solid #4880f0;
+}
+
 
 /*********card*********/
 
@@ -300,9 +335,8 @@ header article {
     text-align: center;
 }
 
-#business-plan_section h5{
+#business-plan_section h5 {
     display: inline-block;
-
 }
 
 .card-container,
@@ -337,30 +371,19 @@ header article {
     text-align: right;
 }
 
-/*__________________________icone________________________________ */
-/* devo chiedere se c'era un modo meno prolisso di scriverlo perchè è ripetitivo */
-/* 
-.card_top-title::before,
+/*__________________________icone__________________________ */
+/* non lo farò mai più così ma non ho voglia di cambiarlo */
+
 .card li.users::before {
     content: "\f007";
     font-family: 'FontAwesome';
     transform: translateY(2px);
     position: absolute;
     left: 25px;
-
 }
 
-.advanced .card_top-title::before,
 .advanced li.users::before {
     content: "\f0c0";
-    font-family: 'FontAwesome';
-    transform: translateY(2px);
-    position: absolute;
-    left: 25px;
-}
-
-.enterprise .card_top-title::before {
-    content: "\f1ad";
     font-family: 'FontAwesome';
     transform: translateY(2px);
     position: absolute;
@@ -391,7 +414,16 @@ header article {
     transform: translateY(2px);
     position: absolute;
     left: var(--space_M);
-} */
+}
+
+.card li {
+    padding-left: var(--space_M);
+}
+
+.card-footer ul {
+    padding-bottom: var(--space_2M);
+
+}
 
 /**********PARTNERSHIP SECTION****************** */
 
@@ -422,21 +454,23 @@ header article {
 .col_40 {
     text-align: center;
 }
-section.bunner{
+
+section.bunner {
     padding-top: var(--space_2M);
 }
 
-#bunner_more-teams{
- margin-bottom: var(--space_4M);
+#bunner_more-teams {
+    margin-bottom: var(--space_4M);
 }
 
 #bunner_more-teams .title.tird-color h2 {
-    padding-bottom:0;
-    padding-top: var(--space_M) ;
+    padding-bottom: 0;
+    padding-top: var(--space_M);
     color: #61082b;
 }
-#bunner_more-teams .row_60-40{
- padding-top: var(--space_2M);
+
+#bunner_more-teams .row_60-40 {
+    padding-top: var(--space_2M);
 }
 
 /************** square ************************/
@@ -490,10 +524,10 @@ section.bunner{
 .maxi.square-content .main-wrap {
     position: absolute;
     width: 33.3%;
-   padding:var(--space_2S);
+    padding: var(--space_2S);
 }
 
-.main-wrap .divider{
+.main-wrap .divider {
     margin-top: var(--space_2S);
     margin-bottom: var(--space_2S);
 }
@@ -503,6 +537,7 @@ section.bunner{
     /* padding-bottom: calc(var(--space_M) *2); */
 
 }
+
 .square-content.university_of_florida>img {
     height: 10%;
 }
@@ -549,35 +584,36 @@ section.bunner{
 
 
 /*********** F.A.Q ***********************/
-#faq h4{
+#faq h4 {
     padding: var(--space_2S) 0;
     display: inline-block;
 }
-#faq input{
+
+#faq input {
     display: inline-block;
     position: relative;
-   left: 35%;
-  visibility: hidden;  
+    left: 35%;
+    visibility: hidden;
 }
 
-#faq .faq-dropdown{
-    border-top: 1px solid  #605f6036;
+#faq .faq-dropdown {
+    border-top: 1px solid #605f6036;
     border-bottom: 1px solid #b3aaa3a1;
 }
 
 
 #faq input:checked {
-position: relative;
-visibility: hidden; 
+    position: relative;
+    visibility: hidden;
 }
 
- #faq input::before {
+#faq input::before {
     content: "\f078";
     font-family: 'FontAwesome';
     position: absolute;
     visibility: visible;
     padding: var(--space_2S);
-    transform: translateX( calc( 0px - var(--space_2S))) translateY( calc( 0px - var(--space_2S)));
+    transform: translateX(calc(0px - var(--space_2S))) translateY(calc(0px - var(--space_2S)));
 }
 
 #faq input:checked::before {
@@ -585,10 +621,11 @@ visibility: hidden;
     font-family: 'FontAwesome';
     visibility: visible;
     padding: var(--space_2S);
-    transform: translateX( calc( 0px - var(--space_2S))) translateY( calc( 0px - var(--space_2S)));
+    transform: translateX(calc(0px - var(--space_2S))) translateY(calc(0px - var(--space_2S)));
 }
+
 .faq-dropdown label>input[type=checkbox]+.answer {
-    height:0px;
+    height: 0px;
     overflow: hidden;
 }
 
@@ -596,7 +633,7 @@ visibility: hidden;
     height: fit-content;
 }
 
-.answer-link{
+.answer-link {
     padding-top: 10px;
 }
 
@@ -607,7 +644,7 @@ footer {
     color: white;
 }
 
-.footer-container {
+#footer-container {
     width: var(--secondary_max-width);
     padding: var(--space_2S) 0;
     margin: auto;
@@ -633,4 +670,3 @@ footer .col_20 li {
     border: none;
 
 }
-
