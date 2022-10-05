@@ -22,10 +22,19 @@
 
 <body>
 
-    <!-- header nav + Jumbotron -->
-    <header class="nav-jumbo_container">
 
-        <!-- nav -->
+
+    <!--
+    **********************
+            HEADER
+************************** -->
+
+
+
+    <!-- header nav + Jumbotron -->
+    <header class="nav-jumbo_container bg-color">
+
+        <!-- **********NAV************ -->
         <nav>
             <div id="nav-container">
                 <!-- nav sx logo + lista -->
@@ -74,21 +83,20 @@
             </div>
         </nav>
 
-        <!-- jumbotron - relative top 100px -->
-        <article class="bg-color">
+        <!-- **********JUMBOTRON***************** -->
+
+        <article>
             <div id="jumbo-container">
                 <!-- row 70-30 -->
 
-                <div class="jumbo-row_70-30">
+                <div class="jumbo-row_60-40">
                     <!-- title -->
-                    <div class="jumbo col_70">
-                        <h1 class="jumbo-title">
+                    <div class="jumbo col_60">
+                        <h1 class="jumbo section-title ">
                             Tutto ciò che ti serve per il lavoro, in un unico posto
                         </h1>
                     </div>
-                    <div class=" jumbo col_30">
-
-                    </div>
+                    <div class=" jumbo col_40"></div>
                 </div>
 
                 <!-- description -->
@@ -104,7 +112,7 @@
                         </button>
                         <!-- anulla -->
                         <div>
-                            <p class="alternative">Annulla in qualsiasi momento </p>
+                            <p>Annulla in qualsiasi momento </p>
                         </div>
                         <!-- download-icon -->
                         <div class="jumbo-download-icon">
@@ -130,7 +138,12 @@
 
     </header>
 
+    <!--*************************
+         MAIN
+***************************** -->
     <main>
+
+        <!-- *** BUISNESS PLAN SECTION********************** -->
         <!-- sezione 1 piani tariffari  ---------------------->
         <section id="business-plan_section">
             <div class="section-container">
@@ -160,10 +173,10 @@
 
 
                     <div class=" card profesional col_30 ">
-                        <!-- card header -->
 
+                        <!-- card header -------------->
                         <div class="card_top-title">
-                            Singolo
+                            <h5>Singolo</h5>
                         </div>
 
                         <div class="card-container">
@@ -174,7 +187,7 @@
                                 </div>
 
                                 <div>
-                                    <h4 class="price">
+                                    <h4 class="price sub-title">
                                         12.00
                                     </h4>
 
@@ -185,7 +198,7 @@
                                 </div>
                             </div>
 
-                            <!-- card-body -->
+                            <!-- card-body --------------------->
                             <div class="card-body">
                                 <ul>
                                     <!-- class:after icons -->
@@ -197,14 +210,14 @@
                                 </ul>
 
                                 <button class="btn"> prova gratis per 30 giorni</button>
-                                <div class="alternative"> oppure
+                                <div> oppure
                                     <a href="#">acquista ora</a>
                                 </div>
                             </div>
 
                             <div class="divider"></div>
 
-                            <!-- card-footer -->
+                            <!-- card-footer -------------------------->
                             <div class="card-footer">
                                 <h4>punti salienti del piano</h4>
                                 <!-- class:after  li icons -->
@@ -217,10 +230,10 @@
                     </div>
 
                     <div class=" card advanced col_30">
-                        <!-- card header -->
 
+                        <!-- card header ------------------------>
                         <div class="card_top-title">
-                            Singolo
+                            <h5>Singolo</h5>
                         </div>
 
                         <div class="card-container">
@@ -231,7 +244,7 @@
                                 </div>
 
                                 <div>
-                                    <h4 class="price">
+                                    <h4 class="price sub-title">
                                         12.00
                                     </h4>
 
@@ -242,7 +255,7 @@
                                 </div>
                             </div>
 
-                            <!-- card-body -->
+                            <!-- card-body ------------------------->
                             <div class="card-body">
                                 <ul>
                                     <!-- class:after icons -->
@@ -254,14 +267,14 @@
                                 </ul>
 
                                 <button class="btn"> prova gratis per 30 giorni</button>
-                                <div class="alternative"> oppure
+                                <div> oppure
                                     <a href="#">acquista ora</a>
                                 </div>
                             </div>
 
                             <div class="divider"></div>
 
-                            <!-- card-footer -->
+                            <!-- card-footer ----------------------------->
                             <div class="card-footer">
                                 <h4>punti salienti del piano</h4>
                                 <!-- class:after  li icons -->
@@ -274,10 +287,10 @@
                     </div>
 
                     <div class=" card enterprise col_30">
-                        <!-- card header -->
 
+                        <!-- card header ----------------------------->
                         <div class="card_top-title">
-                            Azienda
+                            <h5>Azienda</h5>
                         </div>
 
                         <div class="card-container">
@@ -288,7 +301,7 @@
                                 </div>
 
                                 <div>
-                                    <h4 class="price">
+                                    <h4 class="price sub-title">
                                         contattaci
                                     </h4>
 
@@ -299,7 +312,7 @@
                                 </div>
                             </div>
 
-                            <!-- card-body -->
+                            <!-- card-body ------------------------------->
                             <div class="card-body">
                                 <ul>
                                     <!-- class:after icons -->
@@ -311,14 +324,14 @@
                                 </ul>
 
                                 <button class="btn"> prova gratis per 30 giorni</button>
-                                <div class="alternative"> oppure
+                                <div> oppure
                                     <a href="#">acquista ora</a>
                                 </div>
                             </div>
 
                             <div class="divider"></div>
 
-                            <!-- card-footer -->
+                            <!-- card-footer ----------------------->
                             <div class="card-footer">
                                 <h4>punti salienti del piano</h4>
                                 <!-- class:after  li icons -->
@@ -332,16 +345,20 @@
 
                 </div>
 
-                <!-- section-footer -->
+                <!-- section-footer --------------------------------------->
                 <div class="section-footer">
 
-                    <div class="footer_top-title"> <i class="fa-solid fa-building"></i> Team
+                    <div class="footer_top-title"> <i class="fa-solid fa-building"></i>
+                        <h5>Team</h5>
                     </div>
 
                     <div class="row_70-30">
 
                         <div class="col_70">
-                            <h3>Enterprise</h3>
+                            <div class="section-title">
+                                <h3>Enterprise</h3>
+                            </div>
+
                             <h4>Contatta l'ufficio vendite per i prezzi</h4>
                             <p>Soluzioni personalizzate e supporto su misura per aiutare i professionisti IT
                                 nella
@@ -359,10 +376,12 @@
 
 
 
-        <!-- sezione 2 partners -->
+        <!-- **********PARTNERSHIP SECTION******************  -->
+
         <section id="partnership-section">
             <div class="section-container">
                 <div class="row_60-40">
+
                     <!-- img -->
                     <div class="col_60">
                         <img src="img/img/partner.png" alt="partner dropbox">
@@ -399,7 +418,7 @@
                     </h2>
                 </div>
                 <div class="row_30-30-30">
-                    <div class="col_30">
+                    <div class="col_30  sub-title">
                         <div>
                             <img src="/img/img/business-feature-switching-tools.png" alt="switching-tools">
                         </div>
@@ -414,7 +433,8 @@
                             exercitationem laudantium, nulla eius autem, incidunt excepturi quaerat veniam cumque!
                             Blanditiis culpa error non facere sapiente porro. </p>
                     </div>
-                    <div class="col_30">
+
+                    <div class="col_30 ">
                         <div>
                             <img src="/img/img/business-feature-send-files-it.png" alt="">
                         </div>
@@ -429,7 +449,7 @@
                             exercitationem laudantium, nulla eius autem, incidunt excepturi quaerat veniam cumque!
                             Blanditiis culpa error non facere sapiente porro. </p>
                     </div>
-                    <div class="col_30">
+                    <div class="col_30 ">
                         <div>
                             <img src="/img/img/business-feature-coordinate-it.png">
                         </div>
@@ -444,7 +464,7 @@
                             exercitationem laudantium, nulla eius autem, incidunt excepturi quaerat veniam cumque!
                             Blanditiis culpa error non facere sapiente porro. </p>
                     </div>
-                    <div class="col_30">
+                    <div class="col_30 ">
                         <div>
                             <img src="/img/img/business-feature-integrations-it.png">
                         </div>
@@ -459,7 +479,7 @@
                             exercitationem laudantium, nulla eius autem, incidunt excepturi quaerat veniam cumque!
                             Blanditiis culpa error non facere sapiente porro. </p>
                     </div>
-                    <div class="col_30">
+                    <div class="col_30 ">
                         <div>
                             <img src="/img/img/business-feature-multi-device.png">
                         </div>
@@ -474,7 +494,7 @@
                             exercitationem laudantium, nulla eius autem, incidunt excepturi quaerat veniam cumque!
                             Blanditiis culpa error non facere sapiente porro. </p>
                     </div>
-                    <div class="col_30">
+                    <div class="col_30 ">
                         <div>
                             <img src="/img/img/business-feature-security.png">
                         </div>
@@ -494,22 +514,24 @@
         </section>
 
 
-        <!-- bunner1 -->
-        <section class="bunner-container">
-            <div class=" bunner row_60-40">
+        <!-- bunner  -->
+        <div id="bunner_few-teams" class="bunner-container">
+            <section class="bunner">
+                <div class="row_60-40">
 
-                <div class="col_60">
-                    <div class="title">
-                        <h2>Più di 500.000 tem utilizzano Dropbox Business</h2>
+                    <div class="col_60">
+                        <div class="title">
+                            <h2>Più di 500.000 tem utilizzano Dropbox Business</h2>
+                        </div>
+                        <div>
+                            <a href="#">scopri di più sui nostri clienti</a>
+                        </div>
                     </div>
-                    <div>
-                        <a href="#">scopri di più sui nostri clienti</a>
+                    <div class="col_40">
                     </div>
                 </div>
-                <div class="col_40">
-                </div>
-            </div>
-        </section>
+            </section>
+        </div>
 
         <!-- padre flex max-square-sx + max-square-dx + maxi-square-center -->
         <div class="square-bunner-container">
@@ -556,7 +578,7 @@
                             quas
                             corporis, rem ex repudiandae. Voluptatibus,"maxus?</p>
 
-                        <div class="alternative">
+                        <div>
                             Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                         </div>
                     </div>
@@ -586,10 +608,9 @@
         </div>
 
         <!-- bunner2 -->
-        <div class="bg-color">
-            <section class=" bunner-container">
-
-                <div class=" bunner row_60-40">
+        <div id="bunner_more-teams" class="bunner-container bg-color">
+            <section class="bunner">
+                <div class="row_60-40">
 
                     <div class="col_60">
                         <div class="title tird-color">
@@ -604,73 +625,86 @@
                         </button>
                     </div>
                 </div>
+
             </section>
         </div>
 
+
+        <!-- faq  -->
         <section class="faq-container">
             <div id="faq">
-                <h2>Domande frequenti</h2>
+                <div class="section-title">
+                    <h2>Domande frequenti</h2>
+                </div>
 
                 <div class="faq-dropdown">
-
-                    <input type="checkbox" id="dropdown_01">
-
+                    <h4>
+                        Qual'è la differenza tra Dropbox Business Standard e Dropbox Business Advanced?
+                    </h4>
                     <label for="dropdown_01">
-                        <h4>Qual'è la differenza tra Dropbox Business Standard e Dropbox Business Advanced?
-                        </h4>
+                        <input type="checkbox" id="dropdown_01">
+
                         <div class="answer">
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque vero ipsa, facilis
-                                aspernatur ipsum impedit fuga earum, odit sunt minus aut. Ea quam deleniti laborum nemo
-                                modi est nesciunt excepturi?Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex
+                                aspernatur ipsum impedit fuga earum, odit sunt minus aut. Ea quam deleniti laborum
+                                nemo
+                                modi est nesciunt excepturi?Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Ex
                                 voluptatem corrupti quae repellat consectetur nihil libero adipisci fugiat officiis,
-                                debitis, mollitia eaque. Nemo quis illum tempore, repellendus veniam natus asperiores.
+                                debitis, mollitia eaque. Nemo quis illum tempore, repellendus veniam natus
+                                asperiores.
                             </p>
                             <div class="answer-link">
                                 <a href="#">Ulteriori informazioni</a>
                             </div>
-
                         </div>
                     </label>
                 </div>
+
                 <div class="faq-dropdown">
+                    <h4>
+                        Qual'è la differenza tra Dropbox Business Standard e Dropbox Business Advanced?
+                    </h4>
+                    <label for="dropdown_02">
+                        <input type="checkbox" id="dropdown_02">
 
-                    <input type="checkbox" id="dropdown_01">
-
-                    <label for="dropdown_01">
-                        <h4>Qual'è la differenza tra Dropbox Business Standard e Dropbox Business Advanced?
-                        </h4>
                         <div class="answer">
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque vero ipsa, facilis
-                                aspernatur ipsum impedit fuga earum, odit sunt minus aut. Ea quam deleniti laborum nemo
-                                modi est nesciunt excepturi?Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex
+                                aspernatur ipsum impedit fuga earum, odit sunt minus aut. Ea quam deleniti laborum
+                                nemo
+                                modi est nesciunt excepturi?Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Ex
                                 voluptatem corrupti quae repellat consectetur nihil libero adipisci fugiat officiis,
-                                debitis, mollitia eaque. Nemo quis illum tempore, repellendus veniam natus asperiores.
+                                debitis, mollitia eaque. Nemo quis illum tempore, repellendus veniam natus
+                                asperiores.
                             </p>
                             <div class="answer-link">
                                 <a href="#">Ulteriori informazioni</a>
                             </div>
-
                         </div>
                     </label>
                 </div>
+
                 <div class="faq-dropdown">
+                    <h4>
+                        Qual'è la differenza tra Dropbox Business Standard e Dropbox Business Advanced?
+                    </h4>
+                    <label for="dropdown_03">
+                        <input type="checkbox" id="dropdown_03">
 
-                    <input type="checkbox" id="dropdown_01">
-
-                    <label for="dropdown_01">
-                        <h4>Qual'è la differenza tra Dropbox Business Standard e Dropbox Business Advanced?
-                        </h4>
                         <div class="answer">
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque vero ipsa, facilis
-                                aspernatur ipsum impedit fuga earum, odit sunt minus aut. Ea quam deleniti laborum nemo
-                                modi est nesciunt excepturi?Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex
+                                aspernatur ipsum impedit fuga earum, odit sunt minus aut. Ea quam deleniti laborum
+                                nemo
+                                modi est nesciunt excepturi?Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Ex
                                 voluptatem corrupti quae repellat consectetur nihil libero adipisci fugiat officiis,
-                                debitis, mollitia eaque. Nemo quis illum tempore, repellendus veniam natus asperiores.
+                                debitis, mollitia eaque. Nemo quis illum tempore, repellendus veniam natus
+                                asperiores.
                             </p>
                             <div class="answer-link">
                                 <a href="#">Ulteriori informazioni</a>
                             </div>
-
                         </div>
                     </label>
                 </div>
@@ -678,11 +712,20 @@
             </div>
         </section>
     </main>
+
+
+
+
     <footer>
         <div class="footer-container">
-            <div class="row_20-20-20-20-20">
+
+            <div class="row_20x5">
+                
                 <div class="col_20">
-                    <h4>Dropbox</h4>
+                    <div class="section-title">
+                        <h4>Dropbox</h4>
+                    </div>
+
                     <ul>
                         <li>applicazione desktop</li>
                         <li>perchè dropbox</li>
@@ -693,7 +736,10 @@
                 </div>
 
                 <div class="col_20">
-                    <h4>Dropbox</h4>
+                    <div class="section-title">
+                        <h4>Dropbox</h4>
+                    </div>
+
                     <ul>
                         <li>applicazione desktop</li>
                         <li>perchè dropbox</li>
@@ -704,7 +750,10 @@
                 </div>
 
                 <div class="col_20">
-                    <h4>Dropbox</h4>
+                    <div class="section-title">
+                        <h4>Dropbox</h4>
+                    </div>
+
                     <ul>
                         <li>applicazione desktop</li>
                         <li>perchè dropbox</li>
@@ -715,7 +764,10 @@
                 </div>
 
                 <div class="col_20">
-                    <h4>Dropbox</h4>
+                    <div class="section-title">
+                        <h4>Dropbox</h4>
+                    </div>
+
                     <ul>
                         <li>applicazione desktop</li>
                         <li>perchè dropbox</li>
@@ -726,7 +778,10 @@
                 </div>
 
                 <div class="col_20">
-                    <h4>Dropbox</h4>
+                    <div class="section-title">
+                        <h4>Dropbox</h4>
+                    </div>
+
                     <ul>
                         <li>applicazione desktop</li>
                         <li>perchè dropbox</li>
@@ -739,12 +794,12 @@
 
             <div class="divider">
             </div>
-    
+
             <div class="footer-language">
                 <span>
                     <i class="fa-solid fa-earth-americas"></i>
                 </span>
-    
+
                 <select name="language" id="language">
                     <option value="italian">italiano</option>
                 </select>
@@ -753,6 +808,27 @@
         </div>
     </footer>
 
+
 </body>
 
 </html>
+
+<!-- to do list:
+CSS: 
+variabili
+classi
+spazi
+
+
+HTML
+id
+classi
+indentazione
+
+work:
+radiobutton style
+effect faq checkbox
+menu a tendina nav
+altra pagina html del sito
+
+-->

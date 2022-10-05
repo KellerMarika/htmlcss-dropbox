@@ -11,136 +11,139 @@
 :root {
 
     /* background colors */
-    --first_bg_color: #0157ff;
-    --second_bg_color: #a5cbe6;
+    --primary_bg_color: #0157ff;
+    --secondary_bg_color: #a5cbe6;
 
     /* border colors */
-    --first_brd_color: #605f60;
-    --second_brd_color: #ddcdbf;
+    --primary_brd_color: #605f60;
+    --secondary_brd_color: #ddcdbf;
 
     /* text colors */
-    --first_txt_color: #080000;
-    --second_txt_color: #ffffff;
-    --tird_txt_color: #61082b;
+    --primary_txt_color: #080000;
+    --secondary_txt_color: #ffffff;
+    --tertiary_txt_color: #61082b;
 
     /* border */
     --border: 1px solid #ddcdbf;
 
     /*max-width */
-    --first_max-width: 920px;
-    --second_max-width: 1100px;
+    --primary_max-width: 920px;
+    --secondary_max-width: 1200px;
 
     /* space */
     /*     --space_XS: */
-    --space_XS: 5px;
-    --space_S: 10px;
+    --space_XS:5px;
+    
+    --space_S:15px;
+    --space_2S: calc(var(--space_S)*2);
+    --space_4S: calc(var(--space_S)*4);
 
-    --space_M: 20px;
-    /* potrei avere una sola variabile e fare solo calocli!!!!!!!! */
-    --space_L: 40px;
-    --space_XL: 60px;
-
-    /*column-size  */
-    --first_col-space: 30%;
-    --second_col-space: 70%;
-    --third_col-space: 60%;
-    --fourth_col-space: 20%;
-
-    /* column/row space */
-    --fifth_col-space: 50%;
+    --space_1-2M: calc(var(--spaceM)/2);
+     --space_M: 20px;
+    --space_2M: calc(var(--space_M)*2);
+    --space_4M: calc(var(--space_M)*4);
 
     /* font-size */
-    --font-size_XS: 12px;
+    --primary_font-size: 12px;
 }
+
+
 
 body {
     font-family: 'Roboto', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: var(--font-size_XS);
+    font-size: var(--primary_font-size);
 }
 
-/*************************
+/* **************************************************************
+classi comuni
+**************************************************************/
+
+/******************************
             ELEMENTS
     **************************/
 
 h1 {
     font-size: 52px;
     font-weight: 800;
-    padding: var(--space_L) 0;
+    padding-bottom: 40px;
 }
 
 h2 {
     font-size: 32px;
     font-weight: 700;
-    padding-bottom: var(--space_L)
+    padding-bottom: 40px;
 }
 
 h3 {
     font-size: 24px;
+    padding: 15px 0;
     font-weight: 700;
-    padding: var(--space_XS) 0;
+
 }
 
 h4 {
     font-size: 14px;
     font-weight: 700;
-    padding: var(--space_XS) 0;
-}
-
-p {
-    padding-bottom: var(--space_M);
+    padding-bottom: 15px;
 }
 
 a {
     display: inline-block;
-    padding-bottom: var(--space_M);
-}
 
-img {
-    display: block;
-}
-
-section {
-    max-width: var(--first_max-width);
-    margin: auto;
 }
 
 li {
     list-style-type: none;
 }
 
-/* bottoni */
-
-.btn {
-    background-color: #0157ff;
-    border: none;
-    color: #ffffff;
-    padding: var(--space_S) var(--space_M);
-    margin-bottom: var(--space_M);
+li:not(:last-child) {
+    padding-bottom: 15px;
 }
 
-.btn.small {
-    padding: var(--space_XS) var(--space_S);
+ul {
+    padding-top: 15px;
 }
 
-.btn.white {
-    background-color: #ffffff;
-    color: #080000;
-    border-top: 1px solid var(--second_brd_color);
-    border-right: 1px solid #b3aaa3;
-    border-bottom: 1px solid rgb(0, 0, 0);
-    border-left: 1px solid grey;
+article {
+    max-width: var(--secondary_max-width);
+    margin: auto;
 }
 
-.btn.borderless {
-    border: none;
+section {
+    max-width: var(--primary_max-width);
+    margin: auto;
 }
 
-/* sta classe non mi convince ..........................*/
-.alternative {
-    padding-bottom: var(--space_M);
+section img {
+    display: block;
+    width: 100%;
+    object-fit: contain;
 }
 
-/* row e column */
+section,
+article {
+    padding-bottom: 80px;
+}
+
+/***** CLASS-UTILITIES ********************/
+
+[class*="section-title"] {
+    padding-top: 20px;
+}
+
+.sub-title {
+    padding-bottom: 10px;
+}
+
+/***** divisori ********/
+
+.divider {
+    width: 20%;
+    border-top: 1px solid var(--secondary_brd_color);
+    margin: 20px 0;
+}
+
+/** row / column *******/
 
 [class*="row"] {
     display: flex;
@@ -150,6 +153,7 @@ li {
 [class*="col_30"] {
     width: 30%;
     position: relative;
+
 }
 
 [class*="col_70"] {
@@ -165,11 +169,45 @@ li {
     position: relative;
 }
 
+/*** colori ************/
+
+.bg-color {
+    background-color: var(--secondary_bg_color);
+}
+
+/** bottoni ***********/
+
+.btn {
+    background-color: #0157ff;
+    border: none;
+    color: #ffffff;
+    padding: calc(var(--space_M) /2) var(--space_M);
+    margin: var(--space_M) 0;
+}
+
+.btn.small {
+    padding: var(--space_XS) calc(var(--space_M) /2);
+}
+
+.btn.white {
+    background-color: #ffffff;
+    color: #080000;
+    border-top: 1px solid var(--secondary_brd_color);
+    border-right: 1px solid #b3aaa3;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    border-left: 1px solid grey;
+}
+
+.btn.borderless {
+    border: none;
+}
+
+
 /*************************
             HEADER
 **************************/
 
-/* nav */
+/**********NAV********************/
 nav li {
     display: inline-block;
 }
@@ -188,11 +226,11 @@ nav .btn.small {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: var(--space_S);
+    /*     padding: calc(var(--space_M) /2); */
     position: fixed;
     z-index: 2;
     background-color: #ffffff;
-    width: 95%;
+    width: 100%;
 }
 
 .nav-sx *,
@@ -202,28 +240,20 @@ nav .btn.small {
     padding: var(--space_XS);
 }
 
-/* jumbo */
-header article {
-    margin-bottom: 60px;
-}
+/**********JUMBOTRON*****************/
 
-.bg-color {
-    background-color: var(--second_bg_color);
+header article {
+    margin-bottom: calc(var(--space_M)*3);
 }
 
 #jumbo-container {
-    width: var(--second_max-width);
-    margin: auto;
     position: relative;
-    top: var(--space_XL);
-}
-
-.jumbo a {
-    padding-bottom: var(--space_M);
+    padding: 0 20px;
+    top: calc(var(--space_M)*6);
 }
 
 .jumbo-img img {
-    width: 80%;
+    width: 100%;
 }
 
 .jumbo-download-icon {
@@ -237,11 +267,9 @@ header article {
            MAIN
 **************************/
 
-.section-container {
-    padding: var(--space_L) 0;
-}
 
-/* BUISNESS PLAN SECTION................... */
+/*** BUISNESS PLAN SECTION**********************/
+
 #business-plan_section {
     /* relative <-- icon absolute */
     position: relative;
@@ -249,54 +277,47 @@ header article {
 
 .section-body.row_30-30-30 {
     justify-content: space-between;
-    padding-bottom: var(--space_L);
-}
-
-/* radio-button ................DA STILIZZARE*/
-#business-plan_section .radio-btn {
-    margin-bottom: var(--space_M);
-}
-
-.radio-btn span {
-    padding-right: var(--space_L);
 }
 
 .section-header,
 .section-body,
 .section-footer,
-.divider {
-    padding-bottom: var(--space_M);
+.card-container {
+    padding-bottom: 30px;
 }
 
-/* linea divisoria */
-.divider {
-    width: 20%;
-    border-top: 1px solid var(--second_brd_color);
-    padding-bottom: var(--space_L);
-}
-
-/* card....................... */
+/*********card*********/
 
 .section-body .card.col_30 {
     width: 30%;
 }
 
-.card.col_30 .card-container,
-.row_70-30 {
-    border: var(--border);
-    padding: var(--space_M);
-}
-
-.card_top-title,
-.footer_top-title {
-    text-align: center;
+/* class-utilitie */
+[class$="top-title"] {
+    padding: 10px;
     border: var(--border);
     border-bottom: 0;
-    padding: var(--space_S);
+    text-align: center;
 }
 
-.card .price {
-    font-weight: 800;
+#business-plan_section h5{
+    display: inline-block;
+
+}
+
+.card-container,
+#business-plan_section .row_70-30 {
+    border: var(--border);
+}
+
+.card-container,
+.section-footer .col_30,
+.section-footer .col_70 {
+    padding: 0 20px;
+}
+
+.section-footer h3 {
+    padding-top: 0;
 }
 
 .price::before {
@@ -304,26 +325,21 @@ header article {
 }
 
 .card .price-plan {
-    color: var(--second_brd_color);
-    padding: var(--space_XS) 0 var(--space_M) 0;
+    color: var(--secondary_brd_color);
+    padding-bottom: 15px;
 }
 
-.card .btn {
-    text-align: center;
-    margin: var(--space_M);
+#business-plan_section .btn {
+    width: 100%;
 }
 
-.card ul {
-    padding: var(--space_M);
+.section-footer .col_30 {
+    text-align: right;
 }
 
-.card li {
-    padding: var(--space_S) 0;
-}
-
-/* icone */
+/*__________________________icone________________________________ */
 /* devo chiedere se c'era un modo meno prolisso di scriverlo perchè è ripetitivo */
-
+/* 
 .card_top-title::before,
 .card li.users::before {
     content: "\f007";
@@ -375,61 +391,55 @@ header article {
     transform: translateY(2px);
     position: absolute;
     left: var(--space_M);
-}
+} */
 
-#business-plan_section .section-footer h4 {
-    padding-bottom: var(--space_L);
-}
-
-
-/*  PARTNERSHIP SECTION............................... */
+/**********PARTNERSHIP SECTION****************** */
 
 #partnership-section .col_40 {
-    padding: var(--space_L);
+    padding: 15px 30px;
+    text-align: left;
 }
 
-.partnership-card p {
-    padding-top: var(--space_S);
-}
+/**************OPERATION SECTION*********************** */
 
-section img {
-    width: 100%;
+#operations .section-title {
+    text-align: center;
 }
-
-/*  OPERATION............................... */
 
 #operations .row_30-30-30 {
     flex-wrap: wrap;
-    gap: var(--space_L);
+    gap: calc(var(--space_M) *2);
 }
 
-.col-wrap p {
-    padding-bottom: var(--space-XL);
-}
 
-/*bunner  ..................................*/
+/*********BUNNERS ***********************/
+
 .row_60-40 {
     display: flex;
     justify-content: space-between;
 }
 
 .col_40 {
-    text-align: right;
+    text-align: center;
+}
+section.bunner{
+    padding-top: 40px;
 }
 
-.bunner-container {
-    padding: var(--space_XL) 0;
+#bunner_more-teams{
+ margin-bottom: 80px;
 }
 
-.bunner-container .title.tird-color h2 {
+#bunner_more-teams .title.tird-color h2 {
+    padding-bottom:0;
+    padding-top: 20px ;
     color: #61082b;
 }
-
-.bg-color .bunner-container {
-    margin-bottom: var(--space_L);
+#bunner_more-teams .row_60-40{
+ padding-top: 40px;
 }
 
-/* square------------------------------------ */
+/************** square ************************/
 
 .square-bunner-container {
     display: flex;
@@ -480,20 +490,24 @@ section img {
 .maxi.square-content .main-wrap {
     position: absolute;
     width: 33.3%;
-    padding: var(--space_L);
+   padding:30px;
+}
+
+.main-wrap .divider{
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 .main-wrap img {
     width: 50%;
-    padding-bottom: var(--space_L);
+    /* padding-bottom: calc(var(--space_M) *2); */
 
 }
-
 .square-content.university_of_florida>img {
     height: 10%;
 }
 
-/* square-content colors */
+/* ..square-content colors ..*/
 
 .square-content.designit {
     background-color: #a2d39b;
@@ -533,70 +547,61 @@ section img {
     background-color: #f5f5f5;
 }
 
-/* .................................. */
 
-/* faq */
-#faq {
-    padding: var(--space_XL);
+/*********** F.A.Q ***********************/
+#faq h4{
+    padding: 30px 0;
+    display: inline-block;
 }
-
-.faq-dropdown {
-    display: flex;
-    justify-content: space-between;
-    /* input prima di label */
-    flex-direction: row-reverse;
-    padding: var(--space_L) 0;
-    border: none;
-
-    /* ..........................................bordi collassano sono orrendi */
-    border-top: 1px solid #605f60;
-    border-bottom: 1px solid #b3aaa3;
-}
-
-.faq-dropdown:nth-child(2n+1) {
-    border-bottom: 1px solid #605f60;
-    border-top: 1px solid #b3aaa3;
-}
-
-.faq-dropdown .answer p {
-    padding: var(--space_M) 0;
-}
-
-#faq #dropdown_01 {
-    visibility: hidden;
+#faq input{
+    display: inline-block;
     position: relative;
+   left: 35%;
+  visibility: hidden;  
 }
 
-#faq #dropdown_01:checked {
-    visibility: hidden;
-    /*     position: relative; */
-
+#faq .faq-dropdown{
+    border-top: 1px solid  #605f6036;
+    border-bottom: 1px solid #b3aaa3a1;
 }
 
-#faq #dropdown_01::before {
+
+#faq input:checked {
+position: relative;
+visibility: hidden; 
+}
+
+ #faq input::before {
     content: "\f078";
     font-family: 'FontAwesome';
     position: absolute;
-    right: var(--space_L);
-    visibility: visible
+    visibility: visible;
+    padding: 30px;
+    transform: translateX(-30px) translateY(-30px);
 }
 
-#faq #dropdown_01::checked::before {
+#faq input:checked::before {
     content: "\f077";
     font-family: 'FontAwesome';
     visibility: visible;
+    padding: 30px;
+    transform: translateX(-30px) translateY(-30px);
 }
-
-.faq-dropdown>input[type=checkbox]+label {
-    height: var(--space_M);
+ 
+.faq-dropdown label>input[type=checkbox]+.answer {
+    height:0px;
     overflow: hidden;
 }
 
-.faq-dropdown>input[type=checkbox]:checked+label {
+.faq-dropdown label>input[type=checkbox]:checked+.answer {
     height: fit-content;
 }
 
-/* footer */
+.answer-link{
+    padding-top: 10px;
+}
+
+/***************** FOOTER *************************/
 
 footer {
     background-color: #080000;
@@ -604,42 +609,29 @@ footer {
 }
 
 .footer-container {
-    width: var(--first_max-width);
+    width: var(--secondary_max-width);
+    padding: 30px 0;
     margin: auto;
 }
 
-/* footer liste */
-footer .row_20-20-20-20-20 {
+footer .row_20x5 {
     display: flex;
-    padding: var(--space_L) 0;
+    padding-top: 10px;
+    padding-bottom: 30px;
 }
 
 footer .col_20 {
     width: 20%;
 }
 
-footer .col_20 h4 {
-    padding: var(--space_M);
-}
-
 footer .col_20 li {
     font-weight: 300;
-    padding-bottom: var(--space_S);
-}
-footer .col_20 ul{
-    padding-bottom: var(--space_L);
 }
 
-/* footer select */
-
-.footer-language {
-    padding-bottom: var(--space_L);
-}
-.footer-language *{
+.footer-language * {
     background-color: #080000;
-    color: #605f60;
+    color: #3b3a3b;
     border: none;
- 
-}
 
+}
 
