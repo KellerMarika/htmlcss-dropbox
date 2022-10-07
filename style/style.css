@@ -35,11 +35,11 @@
     --space_XS: 5px;
 
     --space_S: 15px;
-    --space_2S: calc(var(--space_S)*2);
-    var(--space_2S) --space_1-2M: calc(var(--spaceM)/2);
+    --space_2S: calc(var(--space_S) * 2);
+    var(--space_2S) --space_1-2M: calc(var(--spaceM) / 2);
     --space_M: 20px;
-    --space_2M: calc(var(--space_M)*2);
-    --space_4M: calc(var(--space_M)*4);
+    --space_2M: calc(var(--space_M) * 2);
+    --space_4M: calc(var(--space_M) * 4);
 
     /* font-size */
     --primary_font-size: 12px;
@@ -240,39 +240,51 @@ nav .btn.small {
     padding: var(--space_XS);
 }
 
+nav .logo img {
+    padding: 0;
+}
+
 
 /********dropdown*********************/
 /* ------work in progress ---------- */
 
-nav ul{
+nav ul {
     overflow: hidden;
 }
-.dropdown li{
+
+.dropdown li {
     display: inline-block;
     text-align: left;
 }
 
-li.dropdown{
+li.dropdown {
     display: inline-block;
     position: relative;
 }
-li.dropdown:hover{
+
+li.dropdown:hover {
     background-color: #f2eee8;
 }
-.dropdown-content{
+
+.dropdown-content {
     position: absolute;
-    top:30px;
-    left:0;
-    padding: 15px;
+    top: 25px;
+    left: 0;
     text-align: left;
     display: none;
     background-color: #f2eee8;
-
 }
-.dropdown:hover .dropdown-content{
+
+.dropdown:hover .dropdown-content {
     display: block;
     background-color: #f2eee8;
 }
+
+.dropdown-content:hover {
+    display: block;
+    background-color: #f2eee8;
+}
+
 
 /**********JUMBOTRON*****************/
 
@@ -293,67 +305,70 @@ header article {
 
 .jumbo-download-icon {
     position: absolute;
-/*     bottom: var(--space_4M); */
+    /*     bottom: var(--space_4M); */
     bottom: 140px;
     font-size: 36px;
     color: #080000;
 }
 
-@keyframes arrow-anchor{
-    0%{ 
+@keyframes arrow-anchor {
+    0% {
         transform: rotate(0deg) scale(100%) translateY(0);
         color: #080000;
     }
 
-    15%{  
+    15% {
         transform: rotate(360deg) scale(150%) translateY(0);
         color: var(--primary_bg_color);
     }
 
-    30%{  
+    30% {
         transform: rotate(360deg) scale(150%) translateY(0);
-        color: var(--primary_bg_color); 
+        color: var(--primary_bg_color);
     }
 
-    70%{  
+    70% {
         transform: rotate(360deg) scale(150%) translateY(5px);
-        color:#4880f0;    
+        color: #4880f0;
     }
- 
-    75%{  
+
+    75% {
         transform: rotate(360deg) scale(200%) translateY(10px);
-        color:rgb(178, 250, 240);
-     
+        color: rgb(178, 250, 240);
+
     }
-    80%{  
+
+    80% {
         transform: rotate(360deg) scale(100%) translateY(-10px);
-        color:var(--primary_bg_color); 
+        color: var(--primary_bg_color);
     }
 
-    95%{  
+    95% {
         transform: rotate(360deg) scale(90%) translateY(0);
-        color: var(--primary_bg_color);   
+        color: var(--primary_bg_color);
     }
 
-    100%{  
+    100% {
         transform: rotate(360deg) scale(100%) translateY(0);
-        color: #080000;   
+        color: #080000;
     }
 
 }
-.arrow-anchor{
-    position:absolute;
+
+.arrow-anchor {
+    position: absolute;
     z-index: 3;
 }
-.arrow-anchor:hover{
-position: absolute;
-animation-name: arrow-anchor;
-animation-duration: 2s;
-animation-timing-function: ease-out;
+
+.arrow-anchor:hover {
+    position: absolute;
+    animation-name: arrow-anchor;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
 }
 
 
-.jumbo-download-icon .fa-arrow-right{
+.jumbo-download-icon .fa-arrow-right {
     position: relative;
     transform: translateY(3800px);
     z-index: 2;
